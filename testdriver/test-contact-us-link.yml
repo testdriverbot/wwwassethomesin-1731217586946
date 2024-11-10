@@ -1,0 +1,20 @@
+version: 4.1.13
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: main google search
+        action: click
+  - prompt: Click the "Contact Us" link in the header.
+    commands:
+      - command: hover-text
+        text: Contact Us
+        description: link in the header
+        action: click
+  - prompt: >-
+      Assert that the Contact Us page loads successfully.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: the Contact Us page is displayed
