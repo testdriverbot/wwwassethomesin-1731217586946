@@ -1,0 +1,18 @@
+version: 4.1.13
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click the "AGREE" button to dismiss the disclaimer.
+    commands:
+      - command: hover-text
+        text: AGREE
+        description: button to dismiss the disclaimer
+        action: click
+  - prompt: >-
+      Assert that the main call to action "LAUNCHING SOON STAY TUNED" is
+      visible.  # Use the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the main call to action "LAUNCHING SOON STAY TUNED" is visible
