@@ -1,0 +1,18 @@
+version: 4.1.13
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+  - prompt: Click on the "Services" dropdown in the header.
+    commands:
+      - command: hover-text
+        text: Services
+        description: dropdown in the header
+        action: click
+  - prompt: >-
+      Assert that the dropdown menu with service options is displayed.  # Use
+      the content of the file from the environment
+    commands:
+      - command: assert
+        expect: the dropdown menu with service options is displayed
