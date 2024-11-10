@@ -1,0 +1,12 @@
+version: 4.1.13
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: AGREE
+        description: agree button in the disclaimer
+        action: click
+  - prompt: Assert that the webpage loads successfully.
+    commands:
+      - command: assert
+        expect: the text "QUALITY IS ASSET" is visible on the webpage
